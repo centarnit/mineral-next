@@ -1,0 +1,24 @@
+{
+    "title": "KONTAKTIRAJ NAS",
+    "items": {
+        "item1": {
+            "title": "Telefon"
+        },
+        "item2": {
+            "title": "E-naslov"
+        },
+        "item3": {
+            "title": "Lokacija"
+        }
+    },
+    "form": {
+        "input1": "Ime",
+        "input2": "E-naslov",
+        "input3": "Sporočilo",
+        "button": "Pošlji"
+    },
+    "offices": {
+        "title": "PISARNE PO SVETU",
+        "description": "Tukaj lahko najdete kontaktne podatke vseh povezanih in hčerinskih družb Mineral d.o.o. obdelava naravnega kamna"
+    }
+}

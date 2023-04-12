@@ -1,0 +1,14 @@
+{
+    "title": "Quarry",
+    "items": {
+        "item1": {
+            "description": "Cezlak is a small settlement on the southern slope of Pohorje in the municipality of Slovenska Bistrica in north-eastern Slovenia. The area is part of the traditional land of Styria. Now, together with the rest of the municipality, it is included in the Drava statistical region."
+        },
+        "item2": {
+            "description": "Lesno Brdo in the municipality of Vrhnika in Slovenia is a continuation of the settlement Lesno Brdo in the neighboring municipality of Horjul. Since it belongs to another municipality, its population and administrative statistics are always listed separately. Lesno Brdo is known mainly for its red limestone quarries."
+        },
+        "item3": {
+            "description": "Drenov Grič is a village northeast of Vrhnika in Notranjska in Slovenia."
+        }
+    }
+}

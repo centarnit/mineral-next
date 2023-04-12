@@ -1,0 +1,68 @@
+{
+    "title": "Companies With a Long",
+    "highlight": "Tradition",
+    "description": "Mineral has been present on the market since 1946",
+    "landing_button": "More",
+
+    "landing_about": {
+        "title": "About us",
+        "description": "The company Mineral has been present on the market since 1946. It developed from a small local stone-cutting company. Today it operates, owns two working quarries, offers finished semi-finished products for stonemasons and finished stonemasonry products and services...",
+        "button": "More"
+    },
+
+    "landing_offers": {
+        "title": "What we offer",
+        "item1": {
+            "title": "High buildings",
+            "description": "We offer material used in high-rise buildings."
+        },
+        "item2": {
+            "title": "Products",
+            "description": "We offer you a variety of finished products that are intended for immidiate use."
+        },
+        "item3": {
+            "title": "Semi-finished products",
+            "description": "We offer you products that you will be able to use for products."
+        }
+    },
+
+    "landing_statistics": {
+        "title": "Statistics",
+        "description": "Our activity is large and long-standing",
+        "item1": {
+            "description": "YEAR ON THE MARKET"
+        },
+        "item2": {
+            "description": "OWN ACTIVE QUARRIES"
+        },
+        "item3": {
+            "description": "SATISFIED COSTUMERS ANNYALLY"
+        },
+        "item4": {
+            "description": "AND MORE COMPLETED FACILITIES ANNUALLY"
+        }
+    },
+
+    "landing_news": {
+        "title": "News and Events",
+        "description": "Latest news and events",
+        "items": {
+            "item1": {
+                "type": "CONSTRUCTION / 8 DEC 2022",
+                "title": "Mineral in Germany",
+                "description": "Before winter shows its teeth ❄️ a look at the outgoing year from the perspective of Mineral's activities on construction sites in Germany🏗"
+            },
+            "item2": {
+                "type": "EXHIBITION / 27 SEP 2022",
+                "title": "Exhibition in Verona",
+                "description": "Welcome to the Mineral exhibition area at the Marmomac fair in Verona. September 27-30, 2022"
+            },
+            "item3": {
+                "type": "MATERIALS / 24 JUN 2022",
+                "title": "Pohorsk tonalite",
+                "description": "2 years have passed since the completion of this project, and the external pressure from Pohorski Tonalite is the same as on the first day."
+            },
+            "button": "READ MORE"
+        }
+    }
+}

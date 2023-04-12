@@ -1,0 +1,24 @@
+{
+    "title": "CONTACT US",
+    "items": {
+        "item1": {
+            "title": "Phone"
+        },
+        "item2": {
+            "title": "Email"
+        },
+        "item3": {
+            "title": "Location"
+        }
+    },
+    "form": {
+        "input1": "Your name",
+        "input2": "Your email",
+        "input3": "Message",
+        "button": "Submit"
+    },
+    "offices": {
+        "title": "OFFICES WORLDWIDE",
+        "description": "Here you can find conatct details of all affiliates and subsidiaries of the Mineral d.o.o. obdelava naravnega kamna"
+    }
+}

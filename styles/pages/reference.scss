@@ -1,0 +1,304 @@
+@import "../base";
+.reference {
+    width: 100%;
+    // padding-top: 9%;
+    .background {
+        width: 100%;
+        height: 50vw;
+        background: linear-gradient(
+                rgba(73, 130, 125, 0.5),
+                rgba(73, 130, 125, 0.3),
+                rgba(73, 130, 125, 0.3),
+                rgba(73, 130, 125, 0.1)
+            ),
+            url("../../images/reference/background.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: white;
+            font-size: 6vw;
+            font-weight: 500;
+        }
+    }
+    .reference-container {
+        width: 100%;
+        margin-top: 10%;
+        .buildings {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                text-align: center;
+                margin-bottom: 10%;
+                width: 100%;
+                background-color: $darkgreen;
+                color: white;
+                font-size: 4vw;
+            }
+            .items {
+                padding: 0 10%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 45%;
+                grid-template-rows: 42% 25%;
+                grid-gap: 10px;
+                $items: (
+                    1: "../../images/reference/reference-1.png",
+                    2: "../../images/reference/reference-2.png",
+                    3: "../../images/reference/reference-3.png",
+                    4: "../../images/reference/reference-4.png",
+                );
+                @each $key, $value in $items {
+                    .item-#{$key} {
+                        background: url($value);
+                        background-size: cover;
+                        height: 40vw;
+
+                        @if $key == 2 {
+                            width: 105%;
+                            margin-left: 10px;
+                            position: relative;
+                            bottom: 5vw;
+                            height: 45vw;
+                        }
+                        @if $key == 4 {
+                            width: 140%;
+                            margin-left: -29%;
+                            background-size: cover;
+                            height: 35vw;
+                            margin-top: 17%;
+                        }
+                        @if $key == 3 {
+                            margin-top: 15%;
+                            width: 70%;
+                            height: 35vw;
+                        }
+                    }
+                }
+            }
+        }
+
+        .hotel {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                text-align: center;
+                margin-bottom: 10%;
+                width: 100%;
+                background-color: $darkgreen;
+                color: white;
+                font-size: 4vw;
+            }
+            .items {
+                padding: 0 10%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 45%;
+                grid-template-rows: 42% 25%;
+                grid-gap: 10px;
+                $items: (
+                    1: "../../images/reference/reference-5.png",
+                    2: "../../images/reference/reference-6.png",
+                    3: "../../images/reference/reference-7.png",
+                    4: "../../images/reference/reference-8.png",
+                );
+                @each $key, $value in $items {
+                    .item-#{$key} {
+                        background: url($value);
+                        background-size: cover;
+                        height: 20vw;
+
+                        @if $key == 2 {
+                            width: 105%;
+                            margin-left: 10px;
+                            position: relative;
+                            bottom: 5vw;
+                            height: 25vw;
+                        }
+                        @if $key == 4 {
+                            width: 140%;
+                            margin-left: -29%;
+                            background-size: cover;
+                            height: 25vw;
+                            margin-top: 1%;
+                        }
+                        @if $key == 3 {
+                            margin-top: 2%;
+                            width: 70%;
+                            height: 25vw;
+                        }
+                    }
+                }
+            }
+        }
+        .vila {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            margin-top: 5vw;
+            h1 {
+                text-align: center;
+                margin-bottom: 10%;
+                width: 100%;
+                background-color: $darkgreen;
+                color: white;
+                font-size: 4vw;
+            }
+            .items {
+                padding: 0 5%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 30% 30% 30%;
+                grid-template-rows: 42% 55%;
+                grid-gap: 1vw;
+                $items: (
+                    1: "../../images/reference/reference-9.png",
+                    2: "../../images/reference/reference-10.png",
+                    3: "../../images/reference/reference-11.png",
+                    4: "../../images/reference/reference-12.png",
+                    5: "../../images/reference/reference-13.png",
+                );
+                @each $key, $value in $items {
+                    .item-#{$key} {
+                        background: url($value);
+                        background-size: cover;
+                        height: 25vw;
+                        width: 105%;
+
+                        @if $key == 2 {
+                            width: 105%;
+                            margin-left: 2vw;
+                            position: relative;
+                            height: 30vw;
+                            top: 2vw;
+                        }
+                        @if $key == 4 {
+                            width: 100%;
+                            position: relative;
+                            background-size: cover;
+                            height: 35vw;
+                            margin-top: 17%;
+                            bottom: 7vw;
+                        }
+                        @if $key == 3 {
+                            width: 100%;
+                            height: 32vw;
+                            margin-left: 5vw;
+                        }
+                        @if $key == 5 {
+                            margin-top: 15%;
+                            width: 215%;
+                            height: 30vw;
+                            margin-left: 2vw;
+                        }
+                    }
+                }
+            }
+        }
+        .spomenik {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                text-align: center;
+                margin-bottom: 10%;
+                width: 100%;
+                background-color: $darkgreen;
+                color: white;
+                font-size: 4vw;
+            }
+            .items {
+                padding: 0 10%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 45%;
+                grid-template-rows: 42% 25%;
+                grid-gap: 10px;
+                $items: (
+                    1: "../../images/reference/reference-14.png",
+                    2: "../../images/reference/reference-15.png",
+                    3: "../../images/reference/reference-16.png",
+                    4: "../../images/reference/reference-17.png",
+                );
+                @each $key, $value in $items {
+                    .item-#{$key} {
+                        background: url($value);
+                        background-size: cover;
+                        height: 20vw;
+
+                        @if $key == 2 {
+                            width: 105%;
+                            margin-left: 10px;
+                            position: relative;
+                            bottom: 5vw;
+                            height: 25vw;
+                        }
+                        @if $key == 4 {
+                            width: 140%;
+                            margin-left: -29%;
+                            background-size: cover;
+                            height: 25vw;
+                            margin-top: 1%;
+                        }
+                        @if $key == 3 {
+                            margin-top: 2%;
+                            width: 70%;
+                            height: 25vw;
+                        }
+                    }
+                }
+            }
+        }
+        .hotel-2 {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            h1 {
+                text-align: center;
+                margin-bottom: 10%;
+                width: 100%;
+                background-color: $darkgreen;
+                color: white;
+                font-size: 4vw;
+            }
+            .items {
+                padding: 0 10%;
+                width: 100%;
+                display: grid;
+                grid-template-columns: 50% 45%;
+                grid-template-rows: 100%;
+                grid-gap: 10px;
+                $items: (
+                    1: "../../images/reference/reference-18.png",
+                    2: "../../images/reference/reference-19.png",
+                );
+                @each $key, $value in $items {
+                    .item-#{$key} {
+                        background: url($value);
+                        background-size: cover;
+                        height: 20vw;
+
+                        @if $key == 2 {
+                            width: 105%;
+                            margin-left: 10px;
+                            position: relative;
+                            bottom: 5vw;
+                            height: 25vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @media screen and (max-width: 700px) {
+        padding-top: 22vw;
+        height: 475vw;
+        .background {
+            height: 60vw;
+        }
+    }
+}

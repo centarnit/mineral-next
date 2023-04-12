@@ -1,0 +1,14 @@
+{
+    "title": "Kamnolomi",
+    "items": {
+        "item1": {
+            "description": "Cezlak je manjše naselje na južnem pobočju Pohorja v Občini Slovenska Bistrica v severovzhodni Sloveniji. Območje je del tradicionalne dežele Štajerske. Sedaj je skupaj z ostalo občino vključena v Dravsko statistično regijo."
+        },
+        "item2": {
+            "description": "Lesno Brdo v Občini Vrhnika v Sloveniji je nadaljevanje naselja Lesno Brdo v sosednji Občini Horjul. Ker pripada drugi občini, sta njeno prebivalstvo in upravna statistika vedno navedena ločeno. Lesno Brdo je znano predvsem po kamnolomih rdečega apnenca."
+        },
+        "item3": {
+            "description": "Drenov Grič je naselje severovzhodno od Vrhnike na Notranjskem v Sloveniji."
+        }
+    }
+}

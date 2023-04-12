@@ -1,0 +1,187 @@
+@import "../base.scss";
+
+.contact-div {
+    width: 100%;
+    .background {
+        width: 100%;
+        height: 40vw;
+        background: url("../../images/contact/background.png");
+        background-size: cover;
+        background-position: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            color: white;
+            font-size: 4vw;
+        }
+    }
+    form {
+        margin-top: 10vw;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        div {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            padding: 0% 10%;
+            input {
+                width: 45%;
+                height: 4vw;
+                border: 1px solid $darkgreen;
+                border-radius: 1vw;
+                padding-left: 3vw;
+                background: none;
+                color: $darkgreen;
+                font-size: 2vw;
+                font-family: "Poppins", sans-serif;
+                font-weight: 200;
+            }
+        }
+        textarea {
+            width: 75%;
+            height: 20vw;
+            border: 1px solid $darkgreen;
+            border-radius: 1vw;
+            padding-left: 3vw;
+            background: none;
+            color: $darkgreen;
+            font-size: 2vw;
+            margin-top: 3vw;
+            font-family: "Poppins", sans-serif;
+            font-weight: 200;
+            padding-top: 1vw;
+        }
+        button {
+            width: 20%;
+            margin-top: 2vw;
+            height: 5vw;
+            background-color: $darkgreen;
+            color: white;
+            border: 2px solid $darkgreen;
+            border-radius: 5vw;
+            font-family: "Poppins", sans-serif;
+            font-size: 2vw;
+            transition: all ease-in-out 0.25s;
+            &:hover {
+                color: $darkgreen;
+                cursor: pointer;
+                background-color: white;
+            }
+        }
+    }
+    .offices {
+        width: 100%;
+        text-align: center;
+        margin-top: 10vw;
+        color: $darkgreen;
+        h1 {
+            font-size: 5vw;
+        }
+        p {
+            font-size: 3vw;
+
+            margin-top: 2vw;
+        }
+        .cards {
+            width: 100%;
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 5%;
+            .card {
+                width: 25%;
+                text-align: start;
+                box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
+                    rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
+                padding: 2% 0% 2% 2%;
+
+                p,
+                a {
+                    font-size: 1.5vw;
+                    font-weight: 200;
+                    width: 100%;
+                    text-decoration: none;
+                    color: $darkgreen;
+                }
+                h1 {
+                    font-size: 2.5vw;
+                    font-weight: 600;
+                    color: $darkgreen;
+                    margin-bottom: 10px;
+                }
+            }
+        }
+        @media screen and (max-width: 700px) {
+            & {
+                margin-top: 15vw;
+                height: 50vw;
+                .cards {
+                    width: 100%;
+                    flex-direction: column;
+                    align-items: center;
+                    margin-top: 5vw;
+                    .card {
+                        margin-bottom: 5vw;
+                        width: 70%;
+                        text-align: center;
+                        padding: 5% 0%;
+                        p,
+                        a {
+                            font-size: 4vw;
+                        }
+                        h1 {
+                            font-size: 5vw;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .map {
+        width: 100%;
+        margin-top: 10vw;
+        height: 50vw;
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    @media screen and (max-width: 700px) {
+        padding-top: 22vw;
+        height: 417vw;
+        .background {
+            height: 40vw;
+        }
+        form {
+            margin-top: 15vw;
+            div {
+                flex-direction: column;
+                input {
+                    width: 100%;
+                    height: 10vw;
+                    margin-bottom: 5vw;
+                    font-size: 3.5vw;
+                }
+            }
+            textarea {
+                width: 80%;
+                margin-top: 0vw;
+                font-size: 3.5vw;
+            }
+            button {
+                width: 40%;
+                margin-top: 5vw;
+                height: 10vw;
+                font-size: 4vw;
+            }
+        }
+        .map {
+            margin-top: 145vw;
+            height: 65vw;
+        }
+    }
+}

@@ -1,0 +1,66 @@
+@import "../base.scss";
+
+.about {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .background {
+        height: 45vw;
+        width: 100%;
+        background: linear-gradient(
+                rgba(73, 130, 125, 0.5),
+                rgba(73, 130, 125, 0.3),
+                rgba(73, 130, 125, 0.3),
+                rgba(73, 130, 125, 0.1)
+            ),
+            url("../../images/about/background.png");
+        background-size: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        h1 {
+            font-size: 5vw;
+            color: white;
+            font-weight: 600;
+            text-align: center;
+        }
+    }
+    .items {
+        padding: 5% 5%;
+        display: flex;
+        flex-direction: column;
+        height: 100vw;
+        .info {
+            width: 100%;
+            background-color: $darkgreen;
+            color: white;
+            padding: 5%;
+            p {
+                font-size: 2vw;
+                font-weight: 300;
+            }
+        }
+        .image {
+            width: 100%;
+            height: 45vw;
+            margin-top: 10vw;
+            background: url("../../images/about/item.png");
+            background-size: cover;
+            background-position: center;
+        }
+    }
+    @media screen and (max-width: 700px) {
+        padding-top: 22vw;
+        .background {
+            height: 80vw;
+        }
+        .items {
+            .info {
+                p {
+                    font-size: 3vw;
+                }
+            }
+        }
+    }
+}

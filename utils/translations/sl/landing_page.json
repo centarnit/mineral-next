@@ -1,0 +1,68 @@
+{
+    "title": "Podjetja z dolgoletno",
+    "highlight": "Tradicijo",
+    "description": "Mineral je na trgu prisoten že od leta 1946",
+    "landing_button": "Več",
+
+    "landing_about": {
+        "title": "O nas",
+        "description": "Podjetje Mineral je na trgu prisotno že od leta 1946. Razvilo se je iz majhnega lokalnega kamnoseškega podjetja. Danes deluje, ima v lasti dva delujoča kamnoloma, ponuja gotove kamnoseške polizdelke ter gotove kamnoseške izdelke in storitve...",
+        "button": "Več"
+    },
+
+    "landing_offers": {
+        "title": "Kaj ponujamo",
+        "item1": {
+            "title": "Visoke zgradbe",
+            "description": "Ponujamo material, ki se uporablja v visokih stavbah."
+        },
+        "item2": {
+            "title": "Izdelki",
+            "description": "Ponujamo vam različne končne izdelke, ki so namenjeni takojšnji uporabi."
+        },
+        "item3": {
+            "title": "Polizdelki",
+            "description": "Ponujamo vam izdelke, ki jih boste lahko uporabili za izdelke."
+        }
+    },
+
+    "landing_statistics": {
+        "title": "Statistika",
+        "description": "Naša dejavnost je obsežna in dolgoletna",
+        "item1": {
+            "description": "LETO NA TRGU"
+        },
+        "item2": {
+            "description": "LASTNI AKTIVNI KAMNOLOMI"
+        },
+        "item3": {
+            "description": "ZADOVOLJNE STRANKE VSAKOLETNO"
+        },
+        "item4": {
+            "description": "IN LETNO VEČ DOKONČANIH OBJEKTOV"
+        }
+    },
+
+    "landing_news": {
+        "title": "Novice in dogodki",
+        "description": "Zadnje novice in dogodki",
+        "items": {
+            "item1": {
+                "type": "GRADBENIŠTVO / 8. DEC 2022",
+                "title": "Mineral v Nemčiji",
+                "description": "Preden zima pokaže zobe ❄️ pogled na iztekajoče se leto z vidika Mineralovih aktivnosti na gradbiščih v Nemčiji🏗"
+            },
+            "item2": {
+                "type": "RAZSTAVA / 27. SEP 2022",
+                "title": "Razstava v Veroni",
+                "description": "Dobrodošli na razstavnem prostoru Mineral na sejmu Marmomac v Veroni. 27.–30. september 2022"
+            },
+            "item3": {
+                "type": "GRADIVA / 24. JUN 2022",
+                "title": "Pohorski tonalit",
+                "description": "Od zaključka tega projekta sta minili 2 leti, zunanji pritisk Pohorskega tonalita pa je enak kot prvi dan."
+            },
+            "button": "PREBERI VEČ"
+        }
+    }
+}
