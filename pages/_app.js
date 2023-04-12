@@ -5,6 +5,8 @@ import { Header } from "@components/Header/Header";
 import { Footer } from "@components/Footer/Footer";
 
 import "../styles/pages/home.scss";
+import "../styles/pages/materials/materials.scss";
+
 import "../styles/header.scss";
 import "../styles/footer.scss";
 
@@ -13,6 +15,7 @@ function MyApp({ Component, pageProps }) {
         <>
             <Header />
             <Component {...pageProps} />
+            <Footer />
         </>
     );
 }

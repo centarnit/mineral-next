@@ -1,10 +1,11 @@
 import Link from "next/link";
-export const Materials = (props: { data: any }) => {
+
+export const Materials = (props) => {
     console.log(props.data);
     return (
         <div className="materials">
             <div className="materials-content">
-                {/* {props.data.map((materialGroup: any) => {
+                {props.data.map((materialGroup) => {
                     return (
                         <Link href={`/materials/${materialGroup.name}`}>
                             <img
@@ -14,7 +15,7 @@ export const Materials = (props: { data: any }) => {
                             <h1>{materialGroup.name.toUpperCase()}</h1>
                         </Link>
                     );
-                })} */}
+                })}
             </div>
         </div>
     );
