@@ -1,7 +1,7 @@
 import { Header } from "./Header/Header";
 import { Footer } from "./Footer/Footer";
 
-export const Layout = (props: { children: React.ReactNode }) => {
+export const Layout = (props) => {
     return (
         <div className="layout">
             <Header />
