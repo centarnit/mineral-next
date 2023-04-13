@@ -13,7 +13,9 @@ export async function getStaticPaths() {
         "https://mineral-backend.centarnit.live/material_group/"
     );
     const data = await res.json();
-
+    if (!Array.isArray(data)) {
+        return { paths: [], fallback: false };
+    }
     const paths = data.map((material) => ({
         params: { variation: material.name },
     }));
@@ -26,7 +28,7 @@ export async function getStaticProps({ params }) {
         `https://mineral-backend.centarnit.live/material_group/`
     );
     const data = (await res.json()).filter(
-        (item) => item.name === params.variation
+        (item) => item.name === params?.variation // use optional chaining to avoid errors
     )[0];
 
     return {
