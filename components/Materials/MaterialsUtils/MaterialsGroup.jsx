@@ -1,7 +1,6 @@
 import Link from "next/link";
-import { useRouter } from "next/router";
 
-const Item = (props: { data: any; group: string }) => {
+const Item = (props) => {
     return (
         <Link
             href={`/materials/${props.group}/${props.data.name}`}
@@ -13,23 +12,23 @@ const Item = (props: { data: any; group: string }) => {
     );
 };
 
-export const MaterialsGroup = () => {
+export const MaterialsGroup = (props) => {
     return (
         <div id="materials-group">
-            {/* <div className="info">
+            <div className="info">
                 <div className="text">
                     <h1>
-                        {materialGroup.name[0].toUpperCase() +
-                            materialGroup.name.slice(1)}
+                        {props.data.name[0].toUpperCase() +
+                            props.data.name.slice(1)}
                     </h1>
-                    <p>{materialGroup.description}</p>
+                    <p>{props.data.description}</p>
                 </div>
             </div>
             <div className="items">
-                {materialGroup.items.map((item: any) => {
-                    return <Item data={item} group={materialGroup.name} />;
+                {props.data.items.map((item) => {
+                    return <Item data={item} group={props.data.name} />;
                 })}
-            </div> */}
+            </div>
         </div>
     );
 };

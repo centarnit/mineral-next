@@ -6,6 +6,8 @@ import { Footer } from "@components/Footer/Footer";
 
 import "../styles/pages/home.scss";
 import "../styles/pages/materials/materials.scss";
+import "../styles/pages/materials/material_group.scss";
+import "../styles/pages/materials/material_item_full.scss";
 
 import "../styles/header.scss";
 import "../styles/footer.scss";

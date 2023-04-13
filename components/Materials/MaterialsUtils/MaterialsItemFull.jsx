@@ -1,15 +1,3 @@
-import { useRouter } from "next/router";
-
-interface Block {
-    blockId: string;
-    finish: string;
-    lph: string;
-    pcs: string;
-    qty: string;
-    um: string;
-    weight: string;
-}
-
 const SpecificationsData = [
     "Wheight for unit of volume",
     "Water absorption",
@@ -20,7 +8,7 @@ const SpecificationsData = [
     "Min fall height",
 ];
 
-const SpecificationTable = (props: { data: Block[] }) => {
+const SpecificationTable = (props) => {
     return (
         <table className="block-table">
             <tr>
@@ -36,7 +24,7 @@ const SpecificationTable = (props: { data: Block[] }) => {
                 Object.values(props.data).map((value) => {
                     return (
                         <tr>
-                            {Object.values(value).map((value: any) => {
+                            {Object.values(value).map((value) => {
                                 return <td>{value}</td>;
                             })}
                         </tr>
@@ -46,27 +34,25 @@ const SpecificationTable = (props: { data: Block[] }) => {
     );
 };
 
-export const MaterialItemFull = () => {
-    const { materialType }: any = useRouter().query;
-
+export const MaterialItemFull = (props) => {
     return (
         <div className="material-item-full">
-            {/* <div className="background">
-                <h1>{materialTypeData.name.toUpperCase()}</h1>
+            <div className="background">
+                <h1>{props.data.name.toUpperCase()}</h1>
             </div>
             <div className="stock">
                 <div className="blocks">
-                    <h1>Blocks {materialTypeData.name}</h1>
-                    <SpecificationTable data={materialTypeData.blocks} />
+                    <h1>Blocks {props.data.name}</h1>
+                    <SpecificationTable data={props.data.blocks} />
                 </div>
             </div>
             <div className="specifications">
                 <div className="specifications-data">
-                    {materialTypeData.specifications &&
-                        Object.values(materialTypeData.specifications).map(
-                            (value: any, index: number) => {
+                    {props.data.specifications &&
+                        Object.values(props.data.specifications).map(
+                            (value, index) => {
                                 return (
-                                    <div className="specification">
+                                    <div className="specification" key={index}>
                                         <h1>{SpecificationsData[index]}</h1>
                                         <p>{value}</p>
                                     </div>
@@ -74,7 +60,7 @@ export const MaterialItemFull = () => {
                             }
                         )}
                 </div>
-            </div> */}
+            </div>
         </div>
     );
 };
