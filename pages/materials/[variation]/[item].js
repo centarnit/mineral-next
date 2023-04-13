@@ -1,7 +1,8 @@
-import { MaterialItemFull } from "@components/Materials/MaterialsUtils/MaterialsItemFull";
+// import { MaterialItemFull } from "@components/Materials/MaterialsUtils/MaterialsItemFull";
 
 export default function MaterialsItem({ data }) {
-    return <MaterialItemFull data={data} />;
+    // return <MaterialItemFull data={data} />;
+    return <div>MaterialItem</div>;
 }
 
 // export async function getStaticPaths() {
