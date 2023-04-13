@@ -1,6 +1,10 @@
 import { MaterialsGroup } from "@components/Materials/MaterialsUtils/MaterialsGroup";
 
-export default function Materials({ data, params }) {
+export default function Materials({ data }) {
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+
     return <MaterialsGroup data={data} />;
 }
 
@@ -27,7 +31,7 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
-            data,
+            data: data || null,
             params,
         },
     };

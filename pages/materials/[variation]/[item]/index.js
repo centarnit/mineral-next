@@ -1,7 +1,10 @@
 import { MaterialItemFull } from "@components/Materials/MaterialsUtils/MaterialsItemFull";
 
 export default function Materials({ data }) {
-    console.log(data);
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+
     return <MaterialItemFull data={data} />;
 }
 
@@ -40,7 +43,7 @@ export async function getStaticProps({ params }) {
 
     return {
         props: {
-            data: materialItem,
+            data: materialItem || null,
         },
     };
 }
