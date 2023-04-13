@@ -13,12 +13,12 @@ const HeaderItems = () => {
 
     return (
         <>
-            <a href="/">{t("items_div.link1")}</a>
-            <a href="/materials">{t("items_div.link2")}</a>
-            <a href="/reference">{t("items_div.link3")}</a>
-            <a href="/quarry">{t("items_div.link4")}</a>
-            <a href="/about">{t("items_div.link5")}</a>
-            <a href="/contact">{t("items_div.link6")}</a>
+            <Link href="/">{t("items_div.link1")}</Link>
+            <Link href="/materials">{t("items_div.link2")}</Link>
+            <Link href="/reference">{t("items_div.link3")}</Link>
+            <Link href="/quarry">{t("items_div.link4")}</Link>
+            <Link href="/about">{t("items_div.link5")}</Link>
+            <Link href="/contact">{t("items_div.link6")}</Link>
         </>
     );
 };

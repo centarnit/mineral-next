@@ -1,44 +1,48 @@
-// import { MaterialItemFull } from "@components/Materials/MaterialsUtils/MaterialsItemFull";
+import { MaterialItemFull } from "@components/Materials/MaterialsUtils/MaterialsItemFull";
 
 export default function MaterialsItem({ data }) {
-    // return <MaterialItemFull data={data} />;
-    return <div>MaterialItem</div>;
+    if (!data) {
+        return <div>Loading...</div>;
+    }
+    console.log(data);
+    return <MaterialItemFull data={data} />;
 }
 
-// export async function getStaticPaths() {
-//     const res = await fetch(
-//         "https://mineral-backend.centarnit.live/material_group"
-//     );
-//     const data = await res.json();
+export async function getStaticPaths() {
+    const res = await fetch(
+        "https://mineral-backend.centarnit.live/material_group/"
+    );
+    // const data = await res.json();
 
-//     const paths = data.reduce((acc, material) => {
-//         const variations = material.items.map((item) => ({
-//             params: {
-//                 variation: material.name,
-//                 item: item.name,
-//             },
-//         }));
-//         return [...acc, ...variations];
-//     }, []);
+    const data = res.json();
 
-//     return { paths, fallback: false };
-// }
+    if (!Array.isArray(data)) {
+        return { paths: [], fallback: false };
+    }
+    const paths = data.map((material) => ({
+        params: { variation: material.name, item: material.name },
+    }));
 
-// export async function getStaticProps({ params }) {
-//     const { variation, item } = params;
+    return { paths, fallback: false };
+}
 
-//     const res = await fetch(
-//         `https://mineral-backend.centarnit.live/material_group/`
-//     );
-//     const data = await res.json();
+export async function getStaticProps({ params }) {
+    const res = await fetch(
+        `https://mineral-backend.centarnit.live/material_group/`
+    );
+    const data = (await res.json()).filter(
+        (item) => item.name === params?.variation // use optional chaining to avoid errors
+    )[0];
 
-//     const materialGroup = data.find((group) => group.name === variation);
+    // filter out the item we want
+    const item = data.items.filter(
+        (item) => item.name === params?.item // use optional chaining to avoid errors
+    )[0];
 
-//     const materialItem = materialGroup.items.find((i) => i.name === item);
-
-//     return {
-//         props: {
-//             data: materialItem,
-//         },
-//     };
-// }
+    return {
+        props: {
+            data: item,
+            params,
+        },
+    };
+}
