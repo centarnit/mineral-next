@@ -38,13 +38,6 @@ export async function getStaticProps({ params }) {
     // find the material item with the same name as the item param
     const materialItem = materialGroup.items.find((i) => i.name === item);
 
-    // if the material item doesn't exist, return a 404 page
-    if (!materialItem) {
-        return {
-            notFound: true,
-        };
-    }
-
     return {
         props: {
             data: materialItem,
