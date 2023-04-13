@@ -1,11 +1,6 @@
-import "../../utils/styles/pages/quarry.scss";
 import { useTranslation } from "react-i18next";
 
-const Item = (props: {
-    className?: string;
-    title: string;
-    description: string;
-}) => {
+const Item = (props) => {
     return (
         <div className={props.className}>
             <div className="placeholder">

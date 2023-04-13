@@ -11,7 +11,7 @@
                 rgba(73, 130, 125, 0.3),
                 rgba(73, 130, 125, 0.1)
             ),
-            url("../../images/reference/background.png");
+            url("../../utils/images/reference/background.png");
         background-size: cover;
         background-repeat: no-repeat;
         display: flex;
@@ -46,10 +46,10 @@
                 grid-template-rows: 42% 25%;
                 grid-gap: 10px;
                 $items: (
-                    1: "../../images/reference/reference-1.png",
-                    2: "../../images/reference/reference-2.png",
-                    3: "../../images/reference/reference-3.png",
-                    4: "../../images/reference/reference-4.png",
+                    1: "../../utils/images/reference/reference-1.png",
+                    2: "../../utils/images/reference/reference-2.png",
+                    3: "../../utils/images/reference/reference-3.png",
+                    4: "../../utils/images/reference/reference-4.png",
                 );
                 @each $key, $value in $items {
                     .item-#{$key} {
@@ -101,10 +101,10 @@
                 grid-template-rows: 42% 25%;
                 grid-gap: 10px;
                 $items: (
-                    1: "../../images/reference/reference-5.png",
-                    2: "../../images/reference/reference-6.png",
-                    3: "../../images/reference/reference-7.png",
-                    4: "../../images/reference/reference-8.png",
+                    1: "../../utils/images/reference/reference-5.png",
+                    2: "../../utils/images/reference/reference-6.png",
+                    3: "../../utils/images/reference/reference-7.png",
+                    4: "../../utils/images/reference/reference-8.png",
                 );
                 @each $key, $value in $items {
                     .item-#{$key} {
@@ -156,11 +156,11 @@
                 grid-template-rows: 42% 55%;
                 grid-gap: 1vw;
                 $items: (
-                    1: "../../images/reference/reference-9.png",
-                    2: "../../images/reference/reference-10.png",
-                    3: "../../images/reference/reference-11.png",
-                    4: "../../images/reference/reference-12.png",
-                    5: "../../images/reference/reference-13.png",
+                    1: "../../utils/images/reference/reference-9.png",
+                    2: "../../utils/images/reference/reference-10.png",
+                    3: "../../utils/images/reference/reference-11.png",
+                    4: "../../utils/images/reference/reference-12.png",
+                    5: "../../utils/images/reference/reference-13.png",
                 );
                 @each $key, $value in $items {
                     .item-#{$key} {
@@ -219,10 +219,10 @@
                 grid-template-rows: 42% 25%;
                 grid-gap: 10px;
                 $items: (
-                    1: "../../images/reference/reference-14.png",
-                    2: "../../images/reference/reference-15.png",
-                    3: "../../images/reference/reference-16.png",
-                    4: "../../images/reference/reference-17.png",
+                    1: "../../utils/images/reference/reference-14.png",
+                    2: "../../utils/images/reference/reference-15.png",
+                    3: "../../utils/images/reference/reference-16.png",
+                    4: "../../utils/images/reference/reference-17.png",
                 );
                 @each $key, $value in $items {
                     .item-#{$key} {
@@ -273,8 +273,8 @@
                 grid-template-rows: 100%;
                 grid-gap: 10px;
                 $items: (
-                    1: "../../images/reference/reference-18.png",
-                    2: "../../images/reference/reference-19.png",
+                    1: "../../utils/images/reference/reference-18.png",
+                    2: "../../utils/images/reference/reference-19.png",
                 );
                 @each $key, $value in $items {
                     .item-#{$key} {

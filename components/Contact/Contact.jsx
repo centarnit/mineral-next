@@ -1,5 +1,3 @@
-import { IconMail, IconMapPin, IconPhone } from "@tabler/icons-react";
-import "../../utils/styles/pages/contact.scss";
 import { useTranslation } from "react-i18next";
 import Link from "next/link";
 

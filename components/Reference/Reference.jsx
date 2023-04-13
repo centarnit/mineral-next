@@ -1,4 +1,3 @@
-import "../../utils/styles/pages/reference.scss";
 import { useTranslation } from "react-i18next";
 
 export const Reference = () => {

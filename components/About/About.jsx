@@ -1,4 +1,3 @@
-import "../../utils/styles/pages/about.scss";
 import { useTranslation } from "react-i18next";
 
 export const About = () => {

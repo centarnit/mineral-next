@@ -5,6 +5,11 @@ import { Header } from "@components/Header/Header";
 import { Footer } from "@components/Footer/Footer";
 
 import "../styles/pages/home.scss";
+import "../styles/pages/contact.scss";
+import "../styles/pages/about.scss";
+import "../styles/pages/reference.scss";
+import "../styles/pages/quarry.scss";
+
 import "../styles/pages/materials/materials.scss";
 import "../styles/pages/materials/material_group.scss";
 import "../styles/pages/materials/material_item_full.scss";
