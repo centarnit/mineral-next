@@ -1,4 +1,5 @@
 import Link from "next/link";
+import NextImage from "next/image";
 
 const Item = (props) => {
     return (
@@ -6,7 +7,12 @@ const Item = (props) => {
             href={`/materials/${props.group}/${props.data.name}`}
             className="materials-group-item"
         >
-            <img src={props.data.front_image} />
+            <NextImage
+                src={props.data.front_image}
+                width={500}
+                height={500}
+                loading="lazy"
+            />
             <h1>{props.data.name}</h1>
         </Link>
     );

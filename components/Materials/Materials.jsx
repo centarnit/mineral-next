@@ -1,4 +1,4 @@
-import Image from "next/image";
+import NextImage from "next/image";
 import Link from "next/link";
 
 export const Materials = (props) => {
@@ -8,10 +8,11 @@ export const Materials = (props) => {
                 {props.data.map((materialGroup) => {
                     return (
                         <Link href={`/materials/${materialGroup.name}`}>
-                            <Image
+                            <NextImage
                                 src={`https://mineral-backend.centarnit.live/material_group/image/${materialGroup.name}`}
                                 width={500}
                                 height={500}
+                                loading="lazy"
                             />
                             <h1>{materialGroup.name.toUpperCase()}</h1>
                         </Link>
