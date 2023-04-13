@@ -4,7 +4,7 @@ export default function MaterialsPage({ data }) {
     return <Materials data={data} />;
 }
 
-export async function getServerSideProps() {
+export async function getStaticProps() {
     const res = await fetch(
         "https://mineral-backend.centarnit.live/material_group"
     );
