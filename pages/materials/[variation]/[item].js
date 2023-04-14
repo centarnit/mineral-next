@@ -29,22 +29,14 @@ export async function getStaticProps({ params }) {
     const res = await fetch(
         `https://mineral-backend.centarnit.live/material_group/`
     );
-    const data = (await res.json()).filter(
-        (item) => item.name === params?.variation // use optional chaining to avoid errors
-    )[0];
-
-    // filter out the item we want
-    const item = data.items.filter(
-        (item) => item.name === params?.item // use optional chaining to avoid errors
-    )[0];
+    const data = (await res.json())
+        .filter((item) => item.name === params?.variation)[0]
+        .items.filter((item) => item.name === params?.item)[0];
 
     return {
         props: {
-            data: item,
-            params: {
-                variation: params.variation,
-                item: params.item,
-            },
+            data: data,
+            params,
         },
     };
 }
