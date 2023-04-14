@@ -12,7 +12,6 @@ export async function getStaticPaths() {
     const res = await fetch(
         "https://mineral-backend.centarnit.live/material_group/"
     );
-    // const data = await res.json();
 
     const data = res.json();
 
@@ -42,7 +41,10 @@ export async function getStaticProps({ params }) {
     return {
         props: {
             data: item,
-            params,
+            params: {
+                variation: params.variation,
+                item: params.item,
+            },
         },
     };
 }
