@@ -8,17 +8,49 @@ import { useTranslation } from "react-i18next";
 import { useState } from "react";
 import Link from "next/link";
 
-const HeaderItems = () => {
+const HeaderItems = (props) => {
     const { t } = useTranslation("header");
+
+    const data = [
+        {
+            name: t("items_div.link1"),
+            href: "/",
+        },
+        {
+            name: t("items_div.link2"),
+            href: "/materials",
+        },
+        {
+            name: t("items_div.link3"),
+            href: "/reference",
+        },
+        {
+            name: t("items_div.link4"),
+            href: "/quarry",
+        },
+        {
+            name: t("items_div.link5"),
+            href: "/about",
+        },
+        {
+            name: t("items_div.link6"),
+            href: "/contact",
+        },
+    ];
 
     return (
         <>
-            <Link href="/">{t("items_div.link1")}</Link>
-            <Link href="/materials">{t("items_div.link2")}</Link>
-            <Link href="/reference">{t("items_div.link3")}</Link>
-            <Link href="/quarry">{t("items_div.link4")}</Link>
-            <Link href="/about">{t("items_div.link5")}</Link>
-            <Link href="/contact">{t("items_div.link6")}</Link>
+            {data.map((item, index) => {
+                return (
+                    <Link
+                        key={index}
+                        href={item.href}
+                        onClick={() => props?.setState(false)}
+                    >
+                        <p>{item.name}</p>
+                    </Link>
+                );
+            })}
         </>
     );
 };
@@ -70,7 +102,7 @@ export const Header = () => {
                     <Link className="icon" href="/"></Link>
                 </div>
                 <div className="items">
-                    <HeaderItems />
+                    <HeaderItems setState={setOpened} />
                 </div>
                 <div className="hamburger" onClick={() => setOpened(!opened)}>
                     <IconMenu2 size={25} className="icon" />

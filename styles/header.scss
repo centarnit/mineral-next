@@ -193,7 +193,7 @@
         flex-direction: column;
         justify-content: start;
         align-items: center;
-        padding: 10% 0% 10% 0%;
+        padding: 5% 0% 10% 0%;
         a {
             color: white;
             text-decoration: none;
@@ -201,7 +201,8 @@
             width: 100%;
             text-align: center;
             transition: 0.3s all ease-in-out;
-            padding: 5%;
+            padding: 3% 0%;
+            margin: 1% 0%;
             &:hover {
                 cursor: pointer;
                 background-color: white;

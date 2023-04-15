@@ -16,22 +16,25 @@ import "../styles/pages/materials/material_item_full.scss";
 
 import "../styles/header.scss";
 import "../styles/footer.scss";
+import "../styles/admin.scss";
+
+import { ModalsProvider } from "@mantine/modals";
+import { MantineProvider } from "@mantine/core";
 
 function MyApp({ Component, pageProps }) {
     return (
-        <>
-            <Header />
-            <Component {...pageProps} />
-            <Footer />
-        </>
+        <MantineProvider>
+            <ModalsProvider>
+                <Header />
+                <Component {...pageProps} />
+                <Footer />
+            </ModalsProvider>
+        </MantineProvider>
     );
 }
 
 MyApp.getInitialProps = async (appContext) => {
     const appProps = await App.getInitialProps(appContext);
-
-    const language = appContext.ctx.req.headers["accept-language"];
-    await i18n.changeLanguage(language);
 
     return { ...appProps, i18n };
 };
