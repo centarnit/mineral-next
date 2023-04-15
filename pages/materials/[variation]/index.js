@@ -25,11 +25,10 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
     const res = await fetch(
-        `https://mineral-backend.centarnit.live/material_group/`
+        `https://mineral-backend.centarnit.live/material_group/${params?.variation}`
     );
-    const data = (await res.json()).filter(
-        (item) => item.name === params?.variation // use optional chaining to avoid errors
-    )[0];
+
+    const data = await res.json();
 
     return {
         props: {
