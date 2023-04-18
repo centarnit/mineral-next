@@ -10,8 +10,8 @@ export const Materials = (props) => {
                         <Link href={`/materials/${materialGroup.name}`}>
                             <NextImage
                                 src={`https://mineral-backend.centarnit.live/material_group/image/${materialGroup.name}`}
-                                width={400}
-                                height={400}
+                                width={100}
+                                height={100}
                             />
                             <h1>{materialGroup.name.toUpperCase()}</h1>
                         </Link>
