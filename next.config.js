@@ -4,5 +4,6 @@ module.exports = {
     images: {
         domains: ["mineral-backend.centarnit.live"],
         loader: "default",
+        unoptimized: true,
     },
 };
