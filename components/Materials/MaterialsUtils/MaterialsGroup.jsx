@@ -7,7 +7,7 @@ const Item = (props) => {
             href={`/materials/${props.group}/${props.data.name}`}
             className="materials-group-item"
         >
-            <NextImage src={props.data.front_image} width={10} height={10} />
+            <NextImage src={props.data.front_image} width={500} height={500} />
             <h1>{props.data.name}</h1>
         </Link>
     );
