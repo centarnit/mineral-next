@@ -1,13 +1,22 @@
 import Link from "next/link";
 import NextImage from "next/image";
 
+const sanityIoImageLoader = ({ src, width, quality }) => {
+    return `https://cdn.sanity.io/${src}?w=${width}&q=${quality || 75}`;
+};
+
 const Item = (props) => {
     return (
         <Link
             href={`/materials/${props.group}/${props.data.name}`}
             className="materials-group-item"
         >
-            <NextImage src={props.data.front_image} width={100} height={100} />
+            <NextImage
+                src={props.data.front_image}
+                width={100}
+                height={100}
+                loader={sanityIoImageLoader}
+            />
             <h1>{props.data.name}</h1>
         </Link>
     );
