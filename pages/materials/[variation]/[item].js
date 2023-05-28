@@ -1,7 +1,7 @@
 import { MaterialItemFull } from "@components/Materials/MaterialsUtils/MaterialsItemFull";
 import { fetchMinerals } from "utils/scripts/fetchMaterials";
 
-export async function getServerSidePaths() {
+export async function getStaticPaths() {
     const minerals = await fetchMinerals();
 
     const paths = [];
@@ -24,7 +24,7 @@ export async function getServerSidePaths() {
     };
 }
 
-export async function getServerSideProps({ params }) {
+export async function getStaticProps({ params }) {
     const minerals = await fetchMinerals();
 
     const mineral = minerals.find(
