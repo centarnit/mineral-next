@@ -9,7 +9,7 @@ export const Materials = (props) => {
                     return (
                         <Link href={`/materials/${materialGroup.name}`}>
                             <NextImage
-                                src={`https://mineral-backend.centarnit.live/material_group/image/${materialGroup.name}`}
+                                src={`https://mineral-si-backend.onrender.com/material_group/image/${materialGroup.name}`}
                                 width={100}
                                 height={100}
                                 priority={true}
