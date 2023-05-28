@@ -1,9 +1,10 @@
 import { MaterialItemFull } from "@components/Materials/MaterialsUtils/MaterialsItemFull";
 import { fetchMinerals } from "utils/scripts/fetchMaterials";
 
-export async function getStaticPaths() {
+export async function getServerSidePaths() {
     const minerals = await fetchMinerals();
 
+    // Create an array of paths for each combination of variation and item
     const paths = [];
     minerals.forEach((mineral) => {
         mineral.variations.forEach((variation) => {
@@ -24,9 +25,11 @@ export async function getStaticPaths() {
     };
 }
 
-export async function getStaticProps({ params }) {
+export async function getServerSideProps({ params }) {
+    // Fetch the minerals data (replace with your actual implementation)
     const minerals = await fetchMinerals();
 
+    // Find the specific mineral based on the provided variation parameter
     const mineral = minerals.find(
         (mineral) => mineral.name === params.variation
     );

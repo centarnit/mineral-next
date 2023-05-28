@@ -6,7 +6,7 @@ export async function getStaticPaths() {
 
     const paths = minerals.map((mineral) => ({
         params: {
-            variation: mineral.name.toLowerCase(),
+            variation: mineral.name,
         },
     }));
 
