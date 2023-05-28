@@ -38,7 +38,7 @@ export const MaterialItemFull = (props) => {
     return (
         <div className="material-item-full">
             <div className="background">
-                <h1>{props.data.name.toUpperCase()}</h1>
+                <h1>{props.data.name}</h1>
             </div>
             <div className="stock">
                 <div className="blocks">
