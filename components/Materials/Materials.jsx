@@ -12,6 +12,7 @@ export const Materials = (props) => {
                                 src={`https://mineral-backend.centarnit.live/material_group/image/${materialGroup.name}`}
                                 width={100}
                                 height={100}
+                                priority={true}
                             />
                             <h1>{materialGroup.name.toUpperCase()}</h1>
                         </Link>

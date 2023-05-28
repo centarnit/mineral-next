@@ -35,7 +35,6 @@ const SpecificationTable = (props) => {
 };
 
 export const MaterialItemFull = (props) => {
-    console.log(props);
     return (
         <div className="material-item-full">
             <div className="background">

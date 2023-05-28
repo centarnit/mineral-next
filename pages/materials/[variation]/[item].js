@@ -1,40 +1,46 @@
 import { MaterialItemFull } from "@components/Materials/MaterialsUtils/MaterialsItemFull";
+import { fetchMinerals } from "utils/scripts/fetchMaterials";
 
-export default function MaterialItem({ data }) {
-    if (!data) {
-        return <div>Loading...</div>;
-    }
+export async function getServerSidePaths() {
+    const minerals = await fetchMinerals();
 
-    return <MaterialItemFull data={data} />;
-}
-
-export async function getStaticPaths() {
-    const res = await fetch(
-        "https://mineral-backend.centarnit.live/material_group"
-    );
-    const data = await res.json();
-
-    const paths = data
-        .map((materialGroup) => {
-            return materialGroup.items.map((materialType) => {
-                return {
+    const paths = [];
+    minerals.forEach((mineral) => {
+        mineral.variations.forEach((variation) => {
+            mineral.items.forEach((item) => {
+                paths.push({
                     params: {
-                        variation: materialGroup.name,
-                        item: materialType.name,
+                        variation: variation.toLowerCase(),
+                        item: item.toLowerCase(),
                     },
-                };
+                });
             });
-        })
-        .flat();
+        });
+    });
 
-    return { paths, fallback: false };
+    return {
+        paths,
+        fallback: false,
+    };
 }
 
-export async function getStaticProps({ params }) {
-    const res = await fetch(
-        `https://mineral-backend.centarnit.live/material_type/${params.variation}/${params.item}`
-    );
-    const data = await res.json();
+export async function getServerSideProps({ params }) {
+    const minerals = await fetchMinerals();
 
-    return { props: { data } };
+    const mineral = minerals.find(
+        (mineral) => mineral.name === params.variation
+    );
+
+    const type =
+        mineral && mineral.items.find((item) => item.name === params.item);
+
+    return {
+        props: {
+            type,
+        },
+    };
+}
+
+export default function MineralTypePage({ type }) {
+    return <MaterialItemFull data={type} />;
 }

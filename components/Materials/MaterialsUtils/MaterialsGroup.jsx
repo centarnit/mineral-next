@@ -14,6 +14,7 @@ const Item = (props) => {
 };
 
 export const MaterialsGroup = (props) => {
+    console.log(props.data);
     return (
         <div id="materials-group">
             <div className="info">

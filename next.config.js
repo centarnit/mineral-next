@@ -5,4 +5,12 @@ module.exports = {
         domains: ["mineral-backend.centarnit.live"],
         unoptimized: true,
     },
+    async rewrites() {
+        return [
+            {
+                source: "/minerals/:id",
+                destination: "/minerals",
+            },
+        ];
+    },
 };

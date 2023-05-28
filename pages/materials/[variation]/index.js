@@ -1,39 +1,35 @@
 import { MaterialsGroup } from "@components/Materials/MaterialsUtils/MaterialsGroup";
+import { fetchMinerals } from "utils/scripts/fetchMaterials";
 
-export default function Materials({ data }) {
-    if (!data) {
-        return <div>Loading...</div>;
-    }
+export async function getServerSidePaths() {
+    const minerals = await fetchMinerals();
 
-    return <MaterialsGroup data={data} />;
-}
-
-export async function getStaticPaths() {
-    const res = await fetch(
-        "https://mineral-backend.centarnit.live/material_group/"
-    );
-    const data = await res.json();
-    if (!Array.isArray(data)) {
-        return { paths: [], fallback: false };
-    }
-    const paths = data.map((material) => ({
-        params: { variation: material.name },
+    const paths = minerals.map((mineral) => ({
+        params: {
+            variation: mineral.name.toLowerCase(),
+        },
     }));
 
-    return { paths, fallback: false };
+    return {
+        paths,
+        fallback: false,
+    };
 }
 
-export async function getStaticProps({ params }) {
-    const res = await fetch(
-        `https://mineral-backend.centarnit.live/material_group/${params?.variation}`
-    );
+export async function getServerSideProps({ params }) {
+    const minerals = await fetchMinerals();
 
-    const data = await res.json();
+    const mineral = minerals.find(
+        (mineral) => mineral.name === params.variation
+    );
 
     return {
         props: {
-            data: data,
-            params,
+            mineral,
         },
     };
+}
+
+export default function MineralTypePage({ mineral }) {
+    return <MaterialsGroup data={mineral} />;
 }
