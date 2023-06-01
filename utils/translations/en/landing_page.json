@@ -64,5 +64,8 @@
             },
             "button": "READ MORE"
         }
+    },
+    "landing_locations": {
+        "title": "Other Locations"
     }
 }

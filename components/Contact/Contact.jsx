@@ -3,26 +3,26 @@ import Link from "next/link";
 
 export const Contact = () => {
     const { t } = useTranslation("contact");
-    const offices = [
+    const data = [
         {
-            name: "Slovenia",
-            address: "Podpeč 46",
-            street: "Sl-1352 Preserje",
+            title: "Slovenia",
+            name: "Popdpeč 46",
+            address: "Sl-1352 Preserje",
             state: "Slovenia",
-            phone: "+386 1 363 32 56",
+            phone: "+386 1 363 32 58",
         },
         {
-            name: "Slovenia",
-            address: "Prodaja Podpeč",
-            street: "Podpeč 46",
+            title: "Slovenia",
+            name: "Prodaja Popdpeč",
+            address: "Popdpeč 46",
             state: "Sl-1352 Preserje",
             phone: "+386 1 363 10 45",
         },
         {
-            name: "Slovenia",
-            address: "Prodaja Cezlak",
-            street: "Cezlak 15",
-            state: "Sl-2137 Oplotnica",
+            title: "Slovenia",
+            name: "Prodaja Cezlak",
+            address: "Cezlak 15",
+            state: "Sl-2317 Oplotnica",
             phone: "+386 2 801 91 03",
         },
     ];
@@ -48,7 +48,7 @@ export const Contact = () => {
                 <h1>{t("offices.title")}</h1>
                 <p>{t("offices.description")}</p>
                 <div className="cards">
-                    {offices.map((office, index) => (
+                    {data.map((office, index) => (
                         <div className="card" key={index}>
                             <h1>{office.name}</h1>
                             <p>{office.address}</p>

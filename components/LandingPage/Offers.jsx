@@ -25,7 +25,7 @@ export const Offers = () => {
     return (
         <div className="offers">
             <div className="heading">
-                <h1>What we offer</h1>
+                <h1>{t("landing_offers.title")}</h1>
             </div>
             <div className="offers-container">
                 {data.map((item, index) => (

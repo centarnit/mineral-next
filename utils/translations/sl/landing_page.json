@@ -1,5 +1,5 @@
 {
-    "title": "Podjetja z dolgoletno",
+    "title": "Podjetje z dolgoletno",
     "highlight": "Tradicijo",
     "description": "Mineral je na trgu prisoten že od leta 1946",
     "landing_button": "Več",
@@ -11,18 +11,18 @@
     },
 
     "landing_offers": {
-        "title": "Kaj ponujamo",
+        "title": "Nudimo vam",
         "item1": {
-            "title": "Visoke zgradbe",
-            "description": "Ponujamo material, ki se uporablja v visokih stavbah."
+            "title": "Visokogradnja",
+            "description": "Nudimo storitve s področja visokih gradenj v Nemčiji"
         },
         "item2": {
             "title": "Izdelki",
-            "description": "Ponujamo vam različne končne izdelke, ki so namenjeni takojšnji uporabi."
+            "description": "Ponujamo vam standardne kamnite izdelke in kamnite izdelke po naročilu ter jih na vašo željo tudi vgradimo.."
         },
         "item3": {
             "title": "Polizdelki",
-            "description": "Ponujamo vam izdelke, ki jih boste lahko uporabili za izdelke."
+            "description": "Za nadaljnjo kamnoseško obdelavo so na voljo plošče, masive in elementi po naročilu."
         }
     },
 
@@ -64,5 +64,9 @@
             },
             "button": "PREBERI VEČ"
         }
+    },
+
+    "landing_locations": {
+        "title": "Naše lokacije"
     }
 }
