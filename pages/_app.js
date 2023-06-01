@@ -14,6 +14,8 @@ import "../styles/pages/materials/materials.scss";
 import "../styles/pages/materials/material_group.scss";
 import "../styles/pages/materials/material_item_full.scss";
 
+import "../styles/admin/create_material.scss";
+
 import "../styles/header.scss";
 import "../styles/footer.scss";
 import "../styles/admin.scss";

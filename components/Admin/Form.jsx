@@ -30,7 +30,7 @@ export function Form(props) {
                 })
             )
             .then((response) => {
-                props.setState(true);
+                props.setLoggedIn(true);
                 window.sessionStorage.setItem(
                     "token",
                     response.data.access_token

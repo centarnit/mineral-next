@@ -2,7 +2,7 @@ import {
     IconBrandFacebook,
     IconBrandInstagram,
     IconMail,
-    IconMapPin, 
+    IconMapPin,
     IconPhone,
 } from "@tabler/icons-react";
 import Link from "next/link";

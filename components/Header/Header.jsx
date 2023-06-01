@@ -69,7 +69,7 @@ export const Header = () => {
             <div className="contact">
                 <div className="phone">
                     <IconPhone className="icon" />
-                    <Link href="tel:+381646132794">+381 (0) 64 6132794</Link>
+                    <Link href="tel:+386 1 363 32 58">+386 1 363 32 58</Link>
                 </div>
                 <div className="social">
                     <div className="icons">
@@ -110,7 +110,7 @@ export const Header = () => {
             </div>
             {opened === true && (
                 <div className="dropdown">
-                    <HeaderItems />
+                    <HeaderItems setState={setOpened} />
                 </div>
             )}
         </div>
