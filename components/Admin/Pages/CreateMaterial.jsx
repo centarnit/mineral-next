@@ -30,7 +30,7 @@ const ItemsRow = (props) => {
 };
 
 export const CreateMaterial = () => {
-    const API_URL = "http://localhost:8000/material_group";
+    const API_URL = "https://mineral-si-backend.onrender.com/material_group";
     const [items, setItems] = useState([]);
     const [opened, setOpened] = useState(false);
 
@@ -102,7 +102,7 @@ export const CreateMaterial = () => {
                                     typeData.append("images", []);
 
                                     axios.post(
-                                        "http://localhost:8000/material_type",
+                                        "https://mineral-si-backend.onrender.com/material_type",
                                         typeData,
                                         {
                                             headers: {

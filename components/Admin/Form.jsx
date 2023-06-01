@@ -19,7 +19,7 @@ export function Form(props) {
     const handleClick = () => {
         axios
             .post(
-                "http://localhost:8000/auth/login",
+                "https://mineral-si-backend.onrender.com/auth/login",
                 new URLSearchParams({
                     grant_type: "",
                     username: username,
