@@ -10,5 +10,5 @@ export default function AdminMaterialPage() {
         if (typeof window !== "undefined") {
             window.location.assign("/admin");
         }
-    }
+    }   
 }

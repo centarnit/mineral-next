@@ -1,6 +1,9 @@
 import Link from "next/link";
+import { useTranslation } from "react-i18next";
 
 export const Locations = () => {
+    const { t } = useTranslation("landing_locations");
+
     const data = [
         {
             title: "Slovenia",

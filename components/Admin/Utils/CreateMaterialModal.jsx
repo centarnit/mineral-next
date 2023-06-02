@@ -58,6 +58,8 @@ export const CreateMaterialModal = (props) => {
                             name: event.currentTarget.Material_Name.value,
                             description: event.currentTarget.Description.value,
                             image: event.currentTarget.image.files[0],
+                            blocks: blockItems,
+                            slabs: slabItems,
                         },
                     ]);
                 }}
