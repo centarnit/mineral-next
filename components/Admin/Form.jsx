@@ -31,10 +31,11 @@ export function Form(props) {
             )
             .then((response) => {
                 props.setLoggedIn(true);
-                window.sessionStorage.setItem(
-                    "token",
-                    response.data.access_token
-                );
+                typeof window !== "undefined" &&
+                    window.sessionStorage.setItem(
+                        "token",
+                        response.data.access_token
+                    );
             });
     };
 
