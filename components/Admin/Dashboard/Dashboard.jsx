@@ -1,21 +1,22 @@
-import { Anchor, Breadcrumbs } from "@mantine/core";
+import Link from "next/link";
+import { Breadcrumbs } from "@mantine/core";
 import { IconEdit, IconNews, IconPlus, IconUpload } from "@tabler/icons-react";
 
 const ActionCard = (props) => {
     return (
-        <a className="action-icon" href={props.path}>
+        <Link className="action-icon" href={props.path}>
             {props.icon}
             <h2>{props.title}</h2>
-        </a>
+        </Link>
     );
 };
 
 export const Dashboard = () => {
     const breadcrumbs = [{ title: "Panel", href: "/admin" }].map(
         (item, index) => (
-            <Anchor href={item.href} key={index}>
+            <Link href={item.href} key={index}>
                 {item.title}
-            </Anchor>
+            </Link>
         )
     );
     return (

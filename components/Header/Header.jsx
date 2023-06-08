@@ -74,8 +74,7 @@ export const Header = () => {
                 <div className="social">
                     <div className="icons">
                         <Link
-                            href="https://www.facebook.com/MineralPodpec/"
-                            target="_blank"
+                            href="https://www.facebook.com/MineralPodpec/"                            target="_blank"
                         >
                             <IconBrandFacebook className="icon" stroke={1} />
                         </Link>
